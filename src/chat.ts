@@ -19,7 +19,7 @@ export class Chat {
       ? `請用 ${process.env.LANGUAGE} 回答,`
       : '';
 
-    return `幫我做Code Review, ${answerLanguage} 
+    return `幫我做Code Review, 有問題的部分請用emoji顯示, 並針對Best Practice給出建議, ${answerLanguage} 
     ${patch}
     `;
   };
