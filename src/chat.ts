@@ -19,7 +19,7 @@ export class Chat {
       ? `請用 ${process.env.LANGUAGE} 回答,`
       : '';
 
-    return `幫我做Code Review, 有問題的部分請用emoji顯示, 並針對Best Practice給出建議, ${answerLanguage} 
+    return `幫我做Code Review, 有問題的部分請用emoji標示出來, 並使用Best Practice給出建議, ${answerLanguage} 
     ${patch}
     `;
   };
@@ -31,6 +31,8 @@ export class Chat {
 
     console.time('code-review cost');
     const prompt = this.generatePrompt(patch);
+
+    console.log(prompt);
 
     const res = await this.chatAPI.sendMessage(prompt);
 
