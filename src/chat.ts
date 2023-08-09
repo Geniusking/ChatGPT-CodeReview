@@ -23,15 +23,11 @@ export class Chat {
       ? `請用 ${process.env.LANGUAGE} 回答,`
       : '';
 
-<<<<<<< HEAD
-    return `幫我做Code Review, 有問題的部分請用emoji標示出來, 並使用Best Practice給出建議, ${answerLanguage} 
-=======
     const prompt =
       process.env.PROMPT ||
-        'Below is a code patch, please help me do a brief code review on it. Any bug risks and/or improvement suggestions are welcome:';
+        '我有以下程式碼片段，希望能請您對其進行程式碼審查。請您指出其中可能存在的錯誤風險，並提供改進建議：';
 
     return `${prompt}, ${answerLanguage}:
->>>>>>> f792a57a317813b35c57c80735a7cd401be7a373
     ${patch}
     `;
   };
