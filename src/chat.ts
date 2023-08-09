@@ -25,7 +25,7 @@ export class Chat {
 
     const prompt =
       process.env.PROMPT ||
-        '我有以下程式碼片段，希望能請您對其進行程式碼審查。請您指出其中可能存在的錯誤風險，並提供改進建議：';
+        'Below is a code patch, please help me do a brief code review on it. Any bug risks and/or improvement suggestions are welcome:';
 
     return `${prompt}, ${answerLanguage}:
     ${patch}
